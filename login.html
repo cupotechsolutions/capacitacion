@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso - ACADEMIA CRE</title>
+    <link rel="stylesheet" href="css/estiloslogin.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="form-box">
+            <img src="img/logoCRE.jpg" alt="Logo" class="auth-logo">
+            
+            <form id="loginForm" action="php/login.php" method="POST">
+                <h2>Bienvenido</h2>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-main">Ingresar</button>
+                <p>¿No tienes cuenta? <a href="#" onclick="toggleForm()">Regístrate aquí</a></p>
+            </form>
+
+            <form id="registerForm" action="php/registro.php" method="POST" style="display: none;">
+                <h2>Crear Cuenta</h2>
+                <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                
+                <select name="rol" class="select-rol">
+                    <option value="alumno">Soy Alumno</option>
+                    <option value="admin">Soy Tutor CRE</option>
+                </select>
+
+                <button type="submit" class="btn-main">Registrarme</button>
+                <p>¿Ya tienes una cuenta? <a href="#" onclick="toggleForm()">Inicia sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const login = document.getElementById('loginForm');
+            const register = document.getElementById('registerForm');
+            if (login.style.display === "none") {
+                login.style.display = "block";
+                register.style.display = "none";
+            } else {
+                login.style.display = "none";
+                register.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

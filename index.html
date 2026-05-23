@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACADEMÍA CRE- Cursos</title>
+    <link rel="stylesheet" href="./css/estiloscre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="img/logoCRE.jpg" alt="Logo CRE" class="logo">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Mis Cursos</a></li>
+                <li><button id="loginBtn">Ingresar</button></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+            <section class="hero">
+                <h1>ACADEMIA CRE</h1>
+                <p>Desarrolla tus habilidades con nuestros cursos de calidad</p>
+            </section>
+
+            <section class="container-cursos" id="catalogo">
+                <div class="card-curso" data-nivel="Basico">
+                <img src="img/curso1.jpg" alt="Curso">
+                <div class="info-curso">
+                    <span class="badge">Básico</span>
+                    <h3>Desarrollo de Base de Datos</h3>
+                    <p class="tutor"><strong>Tutor:</strong> Jhoanna Arevalo</p>
+                    <p class="desc">Aprende desde 0 Base de Datos con SQLServer.</p>
+                    <p class="horario"><i class="far fa-clock"></i> Lunes, Miércoles y Viernes 7:00 PM</p>
+                    <button class="btn-adquirir" onclick="comprarCurso('Desarrollo Web')">Adquirir Curso</button>
+                </div>
+            </div>
+
+            </section>
+
+        </main>
+
+        <a href="https://wa.me/tu_numero" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+         </a>
+
+        <script src="js/main.js"></script>
+
+    
+
+</body>
+</html>
